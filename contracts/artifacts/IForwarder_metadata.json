@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "forwardCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wearables-contracts/contracts/CollectionManager.sol": "IForwarder"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wearables-contracts/contracts/CollectionManager.sol": {
+			"keccak256": "0x5f18f7466d1243d541559576aa2c43c1fb8fa92dd4daaf5185bbca20d59785dc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5d5e5f7d5156e09dec42b7ba562322434112081fc63134d6373c52e44379919",
+				"dweb:/ipfs/QmY4T3tWte6tS3ocbQJP8ruSvyDvgSALFb67bpsJVJkKVA"
+			]
+		}
+	},
+	"version": 1
+}

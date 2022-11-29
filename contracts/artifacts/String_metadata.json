@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wearables-contracts/contracts/Rarities.sol": "String"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wearables-contracts/contracts/Rarities.sol": {
+			"keccak256": "0xf8bc7f64504dc48c4239bfab1054f4197737fa24aea7f827cc72ffb38ed4513d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c68901b70d2a19c6d09c85b6151245eb5a1170e92f9a8a78b29ed0f41b3546fb",
+				"dweb:/ipfs/Qmddc57MMnZNVzBsVwiu6zLv4VBYBHVcgG9Fb6XJ3yiRbG"
+			]
+		}
+	},
+	"version": 1
+}

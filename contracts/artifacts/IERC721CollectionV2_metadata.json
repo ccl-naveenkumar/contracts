@@ -1,0 +1,213 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "COLLECTION_HASH",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_baseURI",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_creator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_shouldComplete",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isApproved",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "_rarities",
+						"type": "address"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "rarity",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "beneficiary",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "metadata",
+								"type": "string"
+							}
+						],
+						"internalType": "struct IERC721CollectionV2.ItemParam[]",
+						"name": "_items",
+						"type": "tuple[]"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_beneficiaries",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_itemIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "issueTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemId",
+						"type": "uint256"
+					}
+				],
+				"name": "items",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_value",
+						"type": "bool"
+					}
+				],
+				"name": "setApproved",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"initialize(string,string,string,address,bool,bool,address,(string,uint256,address,string)[])": {
+					"details": "For some reason using the Struct Item as an output parameter fails, but works as an input parameter"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wearables-contracts/contracts/CollectionManager.sol": "IERC721CollectionV2"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wearables-contracts/contracts/CollectionManager.sol": {
+			"keccak256": "0x5f18f7466d1243d541559576aa2c43c1fb8fa92dd4daaf5185bbca20d59785dc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5d5e5f7d5156e09dec42b7ba562322434112081fc63134d6373c52e44379919",
+				"dweb:/ipfs/QmY4T3tWte6tS3ocbQJP8ruSvyDvgSALFb67bpsJVJkKVA"
+			]
+		}
+	},
+	"version": 1
+}

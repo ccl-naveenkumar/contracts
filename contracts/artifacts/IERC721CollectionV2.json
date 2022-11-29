@@ -1,0 +1,222 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"COLLECTION_HASH()": "7e12acce",
+			"initialize(string,string,string,address,bool,bool,address,(string,uint256,address,string)[])": "d14fee77",
+			"issueTokens(address[],uint256[])": "7c8f76a1",
+			"items(uint256)": "bfb231d2",
+			"setApproved(bool)": "46d5a568"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "COLLECTION_HASH",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "_name",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "_symbol",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "_baseURI",
+					"type": "string"
+				},
+				{
+					"internalType": "address",
+					"name": "_creator",
+					"type": "address"
+				},
+				{
+					"internalType": "bool",
+					"name": "_shouldComplete",
+					"type": "bool"
+				},
+				{
+					"internalType": "bool",
+					"name": "_isApproved",
+					"type": "bool"
+				},
+				{
+					"internalType": "address",
+					"name": "_rarities",
+					"type": "address"
+				},
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "rarity",
+							"type": "string"
+						},
+						{
+							"internalType": "uint256",
+							"name": "price",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "beneficiary",
+							"type": "address"
+						},
+						{
+							"internalType": "string",
+							"name": "metadata",
+							"type": "string"
+						}
+					],
+					"internalType": "struct IERC721CollectionV2.ItemParam[]",
+					"name": "_items",
+					"type": "tuple[]"
+				}
+			],
+			"name": "initialize",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address[]",
+					"name": "_beneficiaries",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "_itemIds",
+					"type": "uint256[]"
+				}
+			],
+			"name": "issueTokens",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_itemId",
+					"type": "uint256"
+				}
+			],
+			"name": "items",
+			"outputs": [
+				{
+					"internalType": "string",
+					"name": "",
+					"type": "string"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				},
+				{
+					"internalType": "string",
+					"name": "",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "",
+					"type": "string"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bool",
+					"name": "_value",
+					"type": "bool"
+				}
+			],
+			"name": "setApproved",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

@@ -1,0 +1,572 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "_acceptedToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_committee",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_feesCollector",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IRarities",
+						"name": "_rarities",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4[]",
+						"name": "_committeeMethods",
+						"type": "bytes4[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "_committeeValues",
+						"type": "bool[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "contract IERC20",
+						"name": "_oldAcceptedToken",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "contract IERC20",
+						"name": "_newAcceptedToken",
+						"type": "address"
+					}
+				],
+				"name": "AcceptedTokenSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "_method",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "_isAllowed",
+						"type": "bool"
+					}
+				],
+				"name": "CommitteeMethodSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_oldCommittee",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_newCommittee",
+						"type": "address"
+					}
+				],
+				"name": "CommitteeSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_oldFeesCollector",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_newFeesCollector",
+						"type": "address"
+					}
+				],
+				"name": "FeesCollectorSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "contract IRarities",
+						"name": "_oldRarities",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "contract IRarities",
+						"name": "_newRarities",
+						"type": "address"
+					}
+				],
+				"name": "RaritiesSet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "acceptedToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "allowedCommitteeMethods",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "committee",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IForwarder",
+						"name": "_forwarder",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC721CollectionFactoryV2",
+						"name": "_factory",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_salt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_baseURI",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_creator",
+						"type": "address"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "rarity",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "beneficiary",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "metadata",
+								"type": "string"
+							}
+						],
+						"internalType": "struct IERC721CollectionV2.ItemParam[]",
+						"name": "_items",
+						"type": "tuple[]"
+					}
+				],
+				"name": "createCollection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feesCollector",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IForwarder",
+						"name": "_forwarder",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC721CollectionV2",
+						"name": "_collection",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "manageCollection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pricePerItem",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rarities",
+				"outputs": [
+					{
+						"internalType": "contract IRarities",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "_newAcceptedToken",
+						"type": "address"
+					}
+				],
+				"name": "setAcceptedToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCommittee",
+						"type": "address"
+					}
+				],
+				"name": "setCommittee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4[]",
+						"name": "_methods",
+						"type": "bytes4[]"
+					},
+					{
+						"internalType": "bool[]",
+						"name": "_values",
+						"type": "bool[]"
+					}
+				],
+				"name": "setCommitteeMethods",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newFeesCollector",
+						"type": "address"
+					}
+				],
+				"name": "setFeesCollector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IRarities",
+						"name": "_newRarities",
+						"type": "address"
+					}
+				],
+				"name": "setRarities",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"_acceptedToken": "- accepted ERC20 token for collection deployment",
+						"_committee": "- committee contract",
+						"_committeeMethods": "- method selectors",
+						"_committeeValues": "- whether the method is allowed or not",
+						"_feesCollector": "- fees collector",
+						"_owner": "- owner of the contract",
+						"_rarities": "- rarities contract"
+					}
+				},
+				"createCollection(address,address,bytes32,string,string,string,address,(string,uint256,address,string)[])": {
+					"params": {
+						"_baseURI": "- base URI for token URIs",
+						"_creator": "- creator address",
+						"_factory": "- collection factory",
+						"_forwarder": "- forwarder contract owner of the collection factory",
+						"_items": "- items to be added",
+						"_name": "- name of the contract",
+						"_salt": "- arbitrary 32 bytes hexa",
+						"_symbol": "- symbol of the contract"
+					}
+				},
+				"manageCollection(address,address,bytes)": {
+					"params": {
+						"_collection": "- collection to be managed",
+						"_data": "- call data to be used",
+						"_forwarder": "- forwarder contract owner of the collection factory"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"setAcceptedToken(address)": {
+					"params": {
+						"_newAcceptedToken": "- accepted ERC20 token for collection deployment"
+					}
+				},
+				"setCommittee(address)": {
+					"params": {
+						"_newCommittee": "- committee contract"
+					}
+				},
+				"setCommitteeMethods(bytes4[],bool[])": {
+					"params": {
+						"_methods": "- method selectors",
+						"_values": "- whether the method is allowed or not"
+					}
+				},
+				"setFeesCollector(address)": {
+					"params": {
+						"_newFeesCollector": "- fees collector"
+					}
+				},
+				"setRarities(address)": {
+					"params": {
+						"_newRarities": "- price per item"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Create the contract"
+				},
+				"createCollection(address,address,bytes32,string,string,string,address,(string,uint256,address,string)[])": {
+					"notice": "Create a collection"
+				},
+				"manageCollection(address,address,bytes)": {
+					"notice": "Manage a collection"
+				},
+				"setAcceptedToken(address)": {
+					"notice": "Set the accepted token"
+				},
+				"setCommittee(address)": {
+					"notice": "Set the committee"
+				},
+				"setCommitteeMethods(bytes4[],bool[])": {
+					"notice": "Set methods to be allowed by the committee"
+				},
+				"setFeesCollector(address)": {
+					"notice": "Set the fees collector"
+				},
+				"setRarities(address)": {
+					"notice": "Set the rarities"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wearables-contracts/contracts/CollectionManager.sol": "CollectionManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wearables-contracts/contracts/CollectionManager.sol": {
+			"keccak256": "0x5f18f7466d1243d541559576aa2c43c1fb8fa92dd4daaf5185bbca20d59785dc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5d5e5f7d5156e09dec42b7ba562322434112081fc63134d6373c52e44379919",
+				"dweb:/ipfs/QmY4T3tWte6tS3ocbQJP8ruSvyDvgSALFb67bpsJVJkKVA"
+			]
+		}
+	},
+	"version": 1
+}
