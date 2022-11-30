@@ -1,0 +1,41 @@
+{
+	"compiler": {
+		"version": "0.6.2+commit.bacdbe57"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Library for managing an enumerable variant of Solidity's https://solidity.readthedocs.io/en/latest/types.html#mapping-types[`mapping`] type. * Maps have the following properties: * - Entries are added, removed, and checked for existence in constant time (O(1)). - Entries are enumerated in O(n). No guarantees are made on the ordering. * ``` contract Example {    // Add the library methods    using EnumerableMap for EnumerableMap.UintToAddressMap; *     // Declare a set state variable    EnumerableMap.UintToAddressMap private myMap; } ``` * As of v3.0.0, only maps of type `uint256 -> address` (`UintToAddressMap`) are supported.",
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"full/ERC721Collection.sol": "EnumerableMap"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"full/ERC721Collection.sol": {
+			"keccak256": "0xbd3f295bcc635ed64740e99e7018736416131fba75d8693540e0638958f44b80",
+			"urls": [
+				"bzz-raw://f5aba45c5010d3990ac7e2d0d958eaf38c90445a5a6ac9beb5bde7c47ff28deb",
+				"dweb:/ipfs/QmQDaDV49dXFvALtTxxJ4RmfVCAaGtCbpeib25wEprUpTE"
+			]
+		}
+	},
+	"version": 1
+}

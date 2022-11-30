@@ -42,7 +42,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/Rarities.sol": "ICollectionManager"
+			"contracts/Committee.sol": "ICollectionManager"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -56,12 +56,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/Rarities.sol": {
-			"keccak256": "0xf8bc7f64504dc48c4239bfab1054f4197737fa24aea7f827cc72ffb38ed4513d",
+		"contracts/Committee.sol": {
+			"keccak256": "0xd2a3cd16f439139492b245465a1f63bf22b22c6d65f6826418d01ac2ac7b7668",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c68901b70d2a19c6d09c85b6151245eb5a1170e92f9a8a78b29ed0f41b3546fb",
-				"dweb:/ipfs/Qmddc57MMnZNVzBsVwiu6zLv4VBYBHVcgG9Fb6XJ3yiRbG"
+				"bzz-raw://3a21edfdc4dbdd02df950802aa1ffec07cb51630a7cc7817445db0fecfc2b454",
+				"dweb:/ipfs/QmS1azuxgkV3pB5RxTjbbzoBT1DYiUSPeZxPvbHN1CCNoV"
 			]
 		}
 	},

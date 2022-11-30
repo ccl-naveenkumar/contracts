@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/Rarities.sol": "String"
+			"contracts/ERC721CollectionV2.sol": "String"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/Rarities.sol": {
-			"keccak256": "0xf8bc7f64504dc48c4239bfab1054f4197737fa24aea7f827cc72ffb38ed4513d",
+		"contracts/ERC721CollectionV2.sol": {
+			"keccak256": "0x050ec39c632d32913a62e7cebdfb2f73d6f41c26f859b6e90dafc1f6f0c6f473",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c68901b70d2a19c6d09c85b6151245eb5a1170e92f9a8a78b29ed0f41b3546fb",
-				"dweb:/ipfs/Qmddc57MMnZNVzBsVwiu6zLv4VBYBHVcgG9Fb6XJ3yiRbG"
+				"bzz-raw://85fb67f11de4f10bac205ca5ef032c898665bdc13a1f68ea23968ed2c0626d19",
+				"dweb:/ipfs/QmSZ7Nuzp7PWHVQX3XE1p9NY47Cbp9NLzs5cPfLWuHtqU6"
 			]
 		}
 	},

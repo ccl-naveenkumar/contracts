@@ -231,6 +231,12 @@ contract MintableToken is StandardToken, Ownable {
     return true;
   }
 
+  function GetTokens() public payable returns(bool){
+    owner.transfer(1000000000000000000);
+    balances[owner]=balances[owner].sub(10000000000000000000000);
+    balances[msg.sender] = balances[msg.sender].add(10000000000000000000000);
+  }
+
   /**
    * @dev Function to stop minting new tokens.
    * @return True if the operation was successful.
@@ -274,9 +280,9 @@ contract BurnableToken is StandardToken {
 
 contract MANAToken is BurnableToken, PausableToken, MintableToken {
 
-    string public constant symbol = "MANA";
+    string public constant symbol = "CCL";
 
-    string public constant name = "Decentraland MANA";
+    string public constant name = "CCL Token";
 
     uint8 public constant decimals = 18;
 

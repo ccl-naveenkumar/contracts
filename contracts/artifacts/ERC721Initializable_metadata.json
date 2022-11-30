@@ -472,7 +472,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/ERC721CollectionV2.sol": "ERC721Initializable"
+			"contracts/ERC721CollectionV2.sol": "ERC721Initializable"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -480,13 +480,13 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/ERC721CollectionV2.sol": {
+		"contracts/ERC721CollectionV2.sol": {
 			"keccak256": "0x050ec39c632d32913a62e7cebdfb2f73d6f41c26f859b6e90dafc1f6f0c6f473",
 			"license": "MIT",
 			"urls": [

@@ -186,7 +186,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/CollectionManager.sol": "IERC721CollectionV2"
+			"contracts/CollectionStore.sol": "IERC721CollectionV2"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -200,12 +200,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/CollectionManager.sol": {
-			"keccak256": "0x5f18f7466d1243d541559576aa2c43c1fb8fa92dd4daaf5185bbca20d59785dc",
+		"contracts/CollectionStore.sol": {
+			"keccak256": "0x30c21527ede128c9b77bf41fcb7f865e927aca4e00418f8f73ea2c006947c539",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a5d5e5f7d5156e09dec42b7ba562322434112081fc63134d6373c52e44379919",
-				"dweb:/ipfs/QmY4T3tWte6tS3ocbQJP8ruSvyDvgSALFb67bpsJVJkKVA"
+				"bzz-raw://373289b8fbdc5c2473fc96db3578a8f0e2a402e52b51ce47a60aad6375a666c9",
+				"dweb:/ipfs/QmcExnfHQTg6ueCC16RdLoQEzNWPLDJ8bHoxrFf976FU5H"
 			]
 		}
 	},

@@ -715,7 +715,6 @@ contract CollectionManager is OwnableInitializable{
 
     /**
     * @notice Create a collection
-    * @param _forwarder - forwarder contract owner of the collection factory
     * @param _factory - collection factory
     * @param _salt - arbitrary 32 bytes hexa
     * @param _name - name of the contract
@@ -725,7 +724,6 @@ contract CollectionManager is OwnableInitializable{
     * @param _items - items to be added
     */
     function createCollection(
-        IForwarder _forwarder,
         IERC721CollectionFactoryV2 _factory,
         bytes32 _salt,
         string memory _name,
@@ -733,8 +731,8 @@ contract CollectionManager is OwnableInitializable{
         string memory _baseURI,
         address _creator,
         IERC721CollectionV2.ItemParam[] memory _items
-     ) external {
-        require(address(_forwarder) != address(this), "CollectionManager#createCollection: FORWARDER_CANT_BE_THIS");
+     ) external returns(address){
+        // require(address(_forwarder) != address(this), "CollectionManager#createCollection: FORWARDER_CANT_BE_THIS");
         uint256 amount = 0;
 
         for (uint256 i = 0; i < _items.length; i++) {
@@ -759,17 +757,24 @@ contract CollectionManager is OwnableInitializable{
             _symbol,
             _baseURI,
             _creator,
-            true, // Collection should be completed
+            false, // Collection should be completed
             false, // Collection should start disapproved
             rarities,
             _items
         );
 
-        (bool success,) = _forwarder.forwardCall(address(_factory), abi.encodeWithSelector(_factory.createCollection.selector, _salt, data));
-        require(
-            success,
-             "CollectionManager#createCollection: FORWARD_FAILED"
-        );
+        // (bool success,) = _forwarder.forwardCall(address(_factory), abi.encodeWithSelector(_factory.createCollection.selector, _salt, data));
+        // require(
+        //     success,
+        //      "CollectionManager#createCollection: FORWARD_FAILED"
+        // );
+
+        (address success)= _factory.createCollection(_salt,data);
+        // require(
+        //     success,
+        //      "CollectionManager#createCollection: FORWARD_FAILED"
+        // );
+        return(success);
     }
 
     /**
@@ -778,29 +783,30 @@ contract CollectionManager is OwnableInitializable{
     * @param _collection - collection to be managed
     * @param _data - call data to be used
     */
-    function manageCollection(IForwarder _forwarder, IERC721CollectionV2 _collection, bytes calldata _data) external {
-        require(address(_forwarder) != address(this), "CollectionManager#manageCollection: FORWARDER_CANT_BE_THIS");
-        require(
-            _msgSender() == committee,
-            "CollectionManager#manageCollection: UNAUTHORIZED_SENDER"
-        );
+    // function manageCollection(IERC721CollectionV2 _collection, bytes calldata _data) external {
+    //     // require(address(_forwarder) != address(this), "CollectionManager#manageCollection: FORWARDER_CANT_BE_THIS");
+    //     require(
+    //         _msgSender() == committee,
+    //         "CollectionManager#manageCollection: UNAUTHORIZED_SENDER"
+    //     );
 
-        (bytes4 method) = abi.decode(_data, (bytes4));
-        require(allowedCommitteeMethods[method], "CollectionManager#manageCollection: COMMITTEE_METHOD_NOT_ALLOWED");
+    //     (bytes4 method) = abi.decode(_data, (bytes4));
+    //     require(allowedCommitteeMethods[method], "CollectionManager#manageCollection: COMMITTEE_METHOD_NOT_ALLOWED");
 
-        bool success;
-        bytes memory res;
+    //     bool success;
+    //     bytes memory res;
 
-        (success, res) = address(_collection).staticcall(abi.encodeWithSelector(_collection.COLLECTION_HASH.selector));
-        require(
-            success && abi.decode(res, (bytes32)) == keccak256("Decentraland Collection"),
-            "CollectionManager#manageCollection: INVALID_COLLECTION"
-        );
+    //     (success, res) = address(_collection).staticcall(abi.encodeWithSelector(_collection.COLLECTION_HASH.selector));
+    //     require(
+    //         success && abi.decode(res, (bytes32)) == keccak256("Decentraland Collection"),
+    //         "CollectionManager#manageCollection: INVALID_COLLECTION"
+    //     );
 
-        (success,) = _forwarder.forwardCall(address(_collection), _data);
-        require(
-            success,
-            "CollectionManager#manageCollection: FORWARD_FAILED"
-        );
+        // (success,) = _forwarder.forwardCall(address(_collection), _data);
+        // require(
+        //     success,
+        //     "CollectionManager#manageCollection: FORWARD_FAILED"
+        // );
+        // (success,) = _collection.
     }
 }

@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/Rarities.sol": "EIP712Base"
+			"contracts/CollectionStore.sol": "EIP712Base"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/Rarities.sol": {
-			"keccak256": "0xf8bc7f64504dc48c4239bfab1054f4197737fa24aea7f827cc72ffb38ed4513d",
+		"contracts/CollectionStore.sol": {
+			"keccak256": "0x30c21527ede128c9b77bf41fcb7f865e927aca4e00418f8f73ea2c006947c539",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c68901b70d2a19c6d09c85b6151245eb5a1170e92f9a8a78b29ed0f41b3546fb",
-				"dweb:/ipfs/Qmddc57MMnZNVzBsVwiu6zLv4VBYBHVcgG9Fb6XJ3yiRbG"
+				"bzz-raw://373289b8fbdc5c2473fc96db3578a8f0e2a402e52b51ce47a60aad6375a666c9",
+				"dweb:/ipfs/QmcExnfHQTg6ueCC16RdLoQEzNWPLDJ8bHoxrFf976FU5H"
 			]
 		}
 	},

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.6.12+commit.27d51765"
+		"version": "0.7.6+commit.7338295f"
 	},
 	"language": "Solidity",
 	"output": {
@@ -19,7 +19,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"wearables-contracts/contracts/ERC721Collection.sol": "Address"
+			"contracts/ERC721CollectionFactoryV2.sol": "Address"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -27,18 +27,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"wearables-contracts/contracts/ERC721Collection.sol": {
-			"keccak256": "0xbd3f295bcc635ed64740e99e7018736416131fba75d8693540e0638958f44b80",
+		"contracts/ERC721CollectionFactoryV2.sol": {
+			"keccak256": "0x9c468c115c0e6159a5452f2a928e6fef31d9c5ff03801546bca41c8647a77f5e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f5aba45c5010d3990ac7e2d0d958eaf38c90445a5a6ac9beb5bde7c47ff28deb",
-				"dweb:/ipfs/QmQDaDV49dXFvALtTxxJ4RmfVCAaGtCbpeib25wEprUpTE"
+				"bzz-raw://56e30b918b6171b77de8ebf0f53ef37ce2fd03bf79aa35d91937c6247a397ebb",
+				"dweb:/ipfs/Qmb93tdyFLL9XG7udX9DVRZsZAfMApu9swHza9ZCfXzac6"
 			]
 		}
 	},

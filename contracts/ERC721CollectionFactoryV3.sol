@@ -26,7 +26,7 @@ contract ERC721CollectionFactoryV3 is Ownable, BeaconProxyFactory {
     * @param _data - call data used to call the contract already created if passed
     * @return addr - address of the contract created
     */
-    function createCollection(bytes32 _salt, bytes memory _data) external onlyOwner returns (address addr) {
+    function createCollection(bytes32 _salt, bytes memory _data) external returns (address addr) {
         // Deploy a new collection
         addr = _createProxy(_salt, _data);
 
